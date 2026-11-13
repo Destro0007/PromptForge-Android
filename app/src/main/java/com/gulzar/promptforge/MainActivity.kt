@@ -22,6 +22,7 @@ class MainActivity:ComponentActivity(){ override fun onCreate(b:Bundle?){super.o
 
 class MainVm:ViewModel(){ var config by mutableStateOf(AppConfig()); var prompt by mutableStateOf(""); var generation by mutableStateOf<Generation?>(null); var status by mutableStateOf("Ready"); var busy by mutableStateOf(false) }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable fun App(store:SecureStore, vm:MainVm=viewModel()) {
     val scope=rememberCoroutineScope(); var tab by remember{mutableIntStateOf(0)}
     LaunchedEffect(Unit){vm.config=store.load()}

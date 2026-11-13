@@ -1,0 +1,79 @@
+build	Build debug APK	﻿2026-11-13T15:07:44.3985778Z ##[group]Run gradle assembleDebug
+build	Build debug APK	2026-11-13T15:07:44.3986312Z ^[[36;1mgradle assembleDebug^[[0m
+build	Build debug APK	2026-11-13T15:07:44.4021576Z shell: /usr/bin/bash -e {0}
+build	Build debug APK	2026-11-13T15:07:44.4021972Z env:
+build	Build debug APK	2026-11-13T15:07:44.4022371Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+build	Build debug APK	2026-11-13T15:07:44.4022932Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.21-9/x64
+build	Build debug APK	2026-11-13T15:07:44.4023416Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+build	Build debug APK	2026-11-13T15:07:44.4023808Z   GRADLE_USER_HOME: /home/runner/.gradle
+build	Build debug APK	2026-11-13T15:07:44.4024172Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+build	Build debug APK	2026-11-13T15:07:44.4024555Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+build	Build debug APK	2026-11-13T15:07:44.4025059Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+build	Build debug APK	2026-11-13T15:07:44.4025836Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+build	Build debug APK	2026-11-13T15:07:44.4026261Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+build	Build debug APK	2026-11-13T15:07:44.4026756Z ##[endgroup]
+build	Build debug APK	2026-11-13T15:07:45.2516765Z Starting a Gradle Daemon (subsequent builds will be faster)
+build	Build debug APK	2026-11-13T15:07:55.4543108Z > Task :app:preBuild UP-TO-DATE
+build	Build debug APK	2026-11-13T15:07:55.4544129Z > Task :app:preDebugBuild UP-TO-DATE
+build	Build debug APK	2026-11-13T15:07:55.4544818Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+build	Build debug APK	2026-11-13T15:07:55.6510856Z > Task :app:generateDebugResources
+build	Build debug APK	2026-11-13T15:07:55.7510814Z > Task :app:packageDebugResources
+build	Build debug APK	2026-11-13T15:07:56.1510122Z > Task :app:processDebugNavigationResources
+build	Build debug APK	2026-11-13T15:07:58.6510071Z > Task :app:generateDebugAssets UP-TO-DATE
+build	Build debug APK	2026-11-13T15:07:58.6510604Z > Task :app:javaPreCompileDebug
+build	Build debug APK	2026-11-13T15:07:58.7514080Z > Task :app:mergeDebugAssets
+build	Build debug APK	2026-11-13T15:07:58.7514996Z > Task :app:parseDebugLocalResources
+build	Build debug APK	2026-11-13T15:07:58.7515631Z > Task :app:compressDebugAssets
+build	Build debug APK	2026-11-13T15:07:58.7516224Z > Task :app:generateDebugRFile
+build	Build debug APK	2026-11-13T15:08:01.3525317Z > Task :app:generateDebugGlobalSynthetics
+build	Build debug APK	2026-11-13T15:08:02.1577898Z > Task :app:desugarDebugFileDependencies
+build	Build debug APK	2026-11-13T15:08:02.1578757Z > Task :app:checkDebugDuplicateClasses
+build	Build debug APK	2026-11-13T15:08:02.2519250Z > Task :app:checkDebugAarMetadata
+build	Build debug APK	2026-11-13T15:08:02.3534212Z > Task :app:mapDebugSourceSetPaths
+build	Build debug APK	2026-11-13T15:08:02.4557925Z > Task :app:mergeLibDexDebug
+build	Build debug APK	2026-11-13T15:08:05.5513790Z > Task :app:compileDebugNavigationResources
+build	Build debug APK	2026-11-13T15:08:07.6527781Z > Task :app:createDebugCompatibleScreenManifests
+build	Build debug APK	2026-11-13T15:08:07.6608422Z > Task :app:extractDeepLinksDebug
+build	Build debug APK	2026-11-13T15:08:08.8517892Z > Task :app:processDebugMainManifest
+build	Build debug APK	2026-11-13T15:08:09.1527915Z > Task :app:processDebugManifest
+build	Build debug APK	2026-11-13T15:08:09.1557536Z > Task :app:processDebugManifestForPackage
+build	Build debug APK	2026-11-13T15:08:09.1612189Z > Task :app:mergeDebugResources
+build	Build debug APK	2026-11-13T15:08:09.1687640Z > Task :app:mergeDebugJniLibFolders
+build	Build debug APK	2026-11-13T15:08:10.7525448Z > Task :app:mergeDebugNativeLibs
+build	Build debug APK	2026-11-13T15:08:10.8530345Z > Task :app:processDebugResources
+build	Build debug APK	2026-11-13T15:08:10.8547007Z 
+build	Build debug APK	2026-11-13T15:08:10.8577665Z > Task :app:stripDebugDebugSymbols
+build	Build debug APK	2026-11-13T15:08:10.8608033Z Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+build	Build debug APK	2026-11-13T15:08:13.3526945Z 
+build	Build debug APK	2026-11-13T15:08:13.3584567Z > Task :app:mergeExtDexDebug
+build	Build debug APK	2026-11-13T15:08:13.4514928Z > Task :app:validateSigningDebug
+build	Build debug APK	2026-11-13T15:08:13.5512666Z > Task :app:writeDebugAppMetadata
+build	Build debug APK	2026-11-13T15:08:13.5537646Z > Task :app:writeDebugSigningConfigVersions
+build	Build debug APK	2026-11-13T15:08:15.2528987Z e: file:///home/runner/work/PromptForge-Android/PromptForge-Android/app/src/main/java/com/gulzar/promptforge/MainActivity.kt:28:22 This material API is experimental and is likely to change or to be removed in the future.
+build	Build debug APK	2026-11-13T15:08:15.2530452Z 
+build	Build debug APK	2026-11-13T15:08:15.2577537Z > Task :app:compileDebugKotlin
+build	Build debug APK	2026-11-13T15:08:15.3534494Z 
+build	Build debug APK	2026-11-13T15:08:15.3577641Z > Task :app:compileDebugKotlin FAILED
+build	Build debug APK	2026-11-13T15:08:15.4510871Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1794582468876.json
+build	Build debug APK	2026-11-13T15:08:15.4521492Z 
+build	Build debug APK	2026-11-13T15:08:15.4524078Z [Incubating] Problems report is available at: file:///home/runner/work/PromptForge-Android/PromptForge-Android/build/reports/problems/problems-report.html
+build	Build debug APK	2026-11-13T15:08:15.4525075Z 
+build	Build debug APK	2026-11-13T15:08:15.4527868Z FAILURE: Build failed with an exception.
+build	Build debug APK	2026-11-13T15:08:15.4528340Z 
+build	Build debug APK	2026-11-13T15:08:15.4528650Z * What went wrong:
+build	Build debug APK	2026-11-13T15:08:15.4529728Z Execution failed for task ':app:compileDebugKotlin' (registered by plugin 'com.android.internal.application').
+build	Build debug APK	2026-11-13T15:08:15.4531229Z > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.btapi.BuildToolsApiCompilationWork
+build	Build debug APK	2026-11-13T15:08:15.4532141Z 30 actionable tasks: 30 executed
+build	Build debug APK	2026-11-13T15:08:15.4532638Z    > Kotlin compiler: OPT_IN_USAGE_ERROR
+build	Build debug APK	2026-11-13T15:08:15.4533113Z        Kotlin compiler error
+build	Build debug APK	2026-11-13T15:08:15.4533939Z          This material API is experimental and is likely to change or to be removed in the future.
+build	Build debug APK	2026-11-13T15:08:15.4534887Z          Location: /home/runner/work/PromptForge-Android/PromptForge-Android/app/src/main/java/com/gulzar/promptforge/MainActivity.kt line 28
+build	Build debug APK	2026-11-13T15:08:15.4535543Z 
+build	Build debug APK	2026-11-13T15:08:15.4535756Z * Try:
+build	Build debug APK	2026-11-13T15:08:15.4536226Z > Run with --stacktrace option to get the stack trace.
+build	Build debug APK	2026-11-13T15:08:15.4537009Z > Run with --info or --debug option to get more log output.
+build	Build debug APK	2026-11-13T15:08:15.4537630Z > Run with --scan to get full insights from a Build Scan (powered by Develocity).
+build	Build debug APK	2026-11-13T15:08:15.4538250Z > Get more help at https://help.gradle.org.
+build	Build debug APK	2026-11-13T15:08:15.4538590Z 
+build	Build debug APK	2026-11-13T15:08:15.4538804Z BUILD FAILED in 30s
+build	Build debug APK	2026-11-13T15:08:16.1448790Z ##[error]Process completed with exit code 1.
