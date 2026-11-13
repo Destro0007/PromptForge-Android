@@ -24,13 +24,12 @@ object Api {
         var last:Throwable?=null
         for(model in models) try {
             val system="""You are an Android coding agent. Return ONLY valid JSON with this shape: {"summary":"...","files":[{"path":"relative/path","content":"complete file text"}]}. Never use absolute paths, .., binary data, secrets, workflow files, or .git paths. Generate complete compile-ready files. The repository is ${config.owner}/${config.repo}, branch ${config.branch}."""
-            val context=runCatching{repositoryContext(config)}.getOrDefault("")
+            val context: String = try { repositoryContext(config) } catch (_: Exception) { "" }
             val userPrompt=if(context.isBlank()) prompt else "$prompt\n\nExisting repository context:\n$context"
             val body=JSONObject().put("model",model).put("messages",JSONArray().put(JSONObject().put("role","system").put("content",system)).put(JSONObject().put("role","user").put("content",userPrompt))).put("temperature",0.2)
             val raw=request("https://openrouter.ai/api/v1/chat/completions","POST",config.openRouterKey,body)
             var text=JSONObject(raw).getJSONArray("choices").getJSONObject(0).getJSONObject("message").getString("content").trim()
-            if(text.startsWith("```")){ text=text.substringAfter('
-').substringBeforeLast("```").trim() }
+            if (text.startsWith("```")) { text = text.substringAfter("\n").substringBeforeLast("```").trim() }
             val o=JSONObject(text); val a=o.getJSONArray("files"); val files=(0 until a.length()).map { i -> val f=a.getJSONObject(i); val p=f.getString("path"); require(!p.startsWith("/") && ".." !in p && !p.startsWith(".git") && !p.startsWith(".github/workflows")){"Unsafe path: $p"}; GeneratedFile(p,f.getString("content")) }
             require(files.isNotEmpty()){"AI returned no files"}; return Generation(o.optString("summary","Generated changes"),files)
         } catch(t:Throwable){ last=t }
